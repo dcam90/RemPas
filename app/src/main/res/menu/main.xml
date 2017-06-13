@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        <item android:id="@+id/addition"
+            android:title="Add Password"/>
+        <item android:id="@+id/retrieval"
+            android:title="Retrieve Password"/>
+        <item android:id="@+id/deletion"
+            android:title="Delete Password"/>
+        <item android:id="@+id/replacement"
+            android:title="Update Password"/>
+</menu>
