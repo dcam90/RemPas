@@ -12,8 +12,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title"
-        android:id="@+id/deleteView"
+        android:id="@+id/replaceView"
         android:layout_below="@+id/updatetitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/old_pass"
+        android:id="@+id/oldView"
+        android:layout_below="@+id/replaceEdit"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_pass"
+        android:id="@+id/newView"
+        android:layout_below="@+id/oldEdit"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_pass_con"
+        android:id="@+id/newConfView"
+        android:layout_below="@+id/newEdit"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp" />
 
@@ -28,8 +55,35 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/deleteEdit"
-        android:layout_below="@+id/deleteView"
+        android:id="@+id/replaceEdit"
+        android:layout_below="@+id/replaceView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/oldEdit"
+        android:layout_below="@+id/oldView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/newEdit"
+        android:layout_below="@+id/newView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/newConfEdit"
+        android:layout_below="@+id/newConfView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -39,10 +93,10 @@
         android:layout_height="wrap_content"
         android:onClick="onClickReplacePass"
         android:text="@string/update_button"
-        android:layout_below="@+id/deleteEdit"
-        android:layout_marginTop="137dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="68dp"
+        android:layout_below="@+id/newConfView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/updatetitle"

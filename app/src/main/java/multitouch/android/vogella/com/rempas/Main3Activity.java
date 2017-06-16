@@ -38,7 +38,7 @@ public class Main3Activity extends Activity {
             case R.id.retrieval:
                 return true;
             case R.id.replacement:
-                return true;
+                startActivity(new Intent(this, Main5Activity.class));
             case R.id.deletion:
                 startActivity(new Intent(this, Main4Activity.class));
             default:

@@ -37,29 +37,52 @@ public class Main5Activity extends Activity {
             case R.id.replacement:
                 return true;
             case R.id.deletion:
-                return true;
+                startActivity(new Intent(this, Main4Activity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
     public void onClickReplacePass(View view) {
-        EditText deletetext = (EditText)findViewById(R.id.deleteEdit);
-        final String delete_query = deletetext.getText().toString();
+        EditText replacetext = (EditText)findViewById(R.id.replaceEdit);
+        final String replace_query = replacetext.getText().toString();
 
-        if (delete_query.length() == 0) {
+        if (replace_query.length() == 0) {
             Toast.makeText(getBaseContext(),
                     "The name field is blank, please re-enter.", Toast.LENGTH_LONG).show();
             return;
         }
 
-        if (!checkIfDataExists(delete_query)) { //can't find the password
+        if (!checkIfDataExists(replace_query)) { //can't find the password
             Toast.makeText(getBaseContext(),
                     "Queried password could not be found.", Toast.LENGTH_LONG).show();
         }
 
         else {
 
+        }
+    }
+
+    private boolean checkIfOldPassMatches(String password) {
+        String URL = "content://multitouch.android.vogella.com.rempas.PasswordProvider/passwords";
+        Uri passwords = Uri.parse(URL);
+        int check = 0;
+
+        Cursor c = getContentResolver().query(passwords, null, null, null, "password");
+        if (!c.moveToFirst()) {
+            return false;
+        }
+        else {
+            c.moveToFirst();
+            do {
+                String inTable = c.getString(c.getColumnIndex(PasswordProvider.PASSWORD));
+                if (inTable.equals(password)) {
+                    check = 1;
+                    break;
+                }
+            } while (c.moveToNext());
+            c.close();
+            return check != 0;
         }
     }
 

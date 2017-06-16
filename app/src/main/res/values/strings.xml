@@ -3,9 +3,12 @@
     <string name="action_settings">Menu</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title">Website/Application Name</string>
+    <string name="old_pass">Old Password</string>
     <string name="password_search">Retrieve Password</string>
     <string name="delete_button">Delete Password</string>
     <string name="update_button">Update Password</string>
+    <string name="new_pass">New Password</string>
+    <string name="new_pass_con">Re-Enter the New Password</string>
     <string name="btn_add">Add Password</string>
     <string name="password">Password</string>
     <string name="note">Note (Optional)</string>
