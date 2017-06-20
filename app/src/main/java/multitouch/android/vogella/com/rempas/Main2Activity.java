@@ -36,10 +36,13 @@ public class Main2Activity extends Activity {
                 return true;
             case R.id.retrieval:
                 startActivity(new Intent(this, Main3Activity.class));
+                return true;
             case R.id.replacement:
                 startActivity(new Intent(this, Main5Activity.class));
+                return true;
             case R.id.deletion:
                 startActivity(new Intent(this, Main4Activity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

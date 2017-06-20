@@ -34,10 +34,13 @@ public class Main4Activity extends Activity {
         switch (item.getItemId()) {
             case R.id.addition:
                 startActivity(new Intent(this, Main2Activity.class));
+                return true;
             case R.id.retrieval:
                 startActivity(new Intent(this, Main3Activity.class));
+                return true;
             case R.id.replacement:
                 startActivity(new Intent(this, Main5Activity.class));
+                return true;
             case R.id.deletion:
                 return true;
             default:
