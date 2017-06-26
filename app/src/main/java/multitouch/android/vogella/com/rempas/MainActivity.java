@@ -3,6 +3,7 @@ package multitouch.android.vogella.com.rempas;
 import android.Manifest;
 import android.app.KeyguardManager;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.hardware.fingerprint.FingerprintManager;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
@@ -38,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Minecraft.ttf");
+        TextView text = (TextView)findViewById(R.id.textView);
+        text.setTypeface(tf);
 
         KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
         FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
